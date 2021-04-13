@@ -1,40 +1,30 @@
 import styled, { css } from "styled-components";
-import {
-  fontSize,
-  fontColor,
-  fontWeight,
-  fontStyle,
-  fontStyleLight,
-  fontStyleBold,
-} from "../constant.style";
+import { fontSize, fontColor, fontWeight, fontStyleLight, fontStyleBold } from "../constant.style";
 
 const Typography = styled.p`
-  color: ${(props) => getColor(props)};
-  font-family: Raleway;
-  ${(props) => getFontStyle(props)};
+    color: ${props => getColor(props)};
+    font-family: Raleway;
+    ${props => getFontStyle(props)};
 `;
 export default Typography;
 
-const getFontStyle = (props) => {
-  if (props.fontStyle)
-    switch (props.fontStyle) {
-      case "light":
-        return fontStyleLight;
-        break;
-      case "bold":
-        return fontStyleBold;
-        break;
-      default:
-        return css`
-          font-size: ${getFontSize(props)};
-          font-weight: ${getWeight(props)}; 
-          `;
-        break;
-    }
+const getFontStyle = props => {
+    if (props.fontStyle)
+        switch (props.fontStyle) {
+            case "light":
+                return fontStyleLight;
+            case "bold":
+                return fontStyleBold;
+            default:
+                return css`
+                    font-size: ${getFontSize(props)};
+                    font-weight: ${getWeight(props)};
+                `;
+        }
 };
 
-const getColor = (props) => props.color ? fontColor[props.color] : fontColor["primary"];
+const getColor = props => (props.color ? fontColor[props.color] : fontColor["primary"]);
 
-const getWeight = (props) => props.weight ? fontWeight[props.weight] : fontWeight["light"];
+const getWeight = props => (props.weight ? fontWeight[props.weight] : fontWeight["light"]);
 
-const getFontSize = (props) => props.variant ? fontSize[props.variant] : fontSize["1rem"];
+const getFontSize = props => (props.variant ? fontSize[props.variant] : fontSize["1rem"]);

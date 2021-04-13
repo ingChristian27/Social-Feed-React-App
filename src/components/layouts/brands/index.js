@@ -4,22 +4,21 @@ import brands from "./data";
 import BrandsStyle from "./brands.style";
 
 const Brands = () => {
-  return (
-    <BrandsStyle>
-      <Row justify={"center"}>
-        {brands.map((brand, index) => (
-          <Grid lg={2} key={index}>
-            <Brand brand={brand} />
-          </Grid>
-        ))}
-      </Row>
-    </BrandsStyle>
-  );
+    return (
+        <BrandsStyle>
+            <Row justify={"center"}>
+                {brands.map((brand, index) => (
+                    <Grid lg={2} key={index}>
+                        <Brand brand={brand} />
+                    </Grid>
+                ))}
+            </Row>
+        </BrandsStyle>
+    );
 };
 
 export default Brands;
 
 const Brand = ({ brand }) => {
-  return <img width="75%" src={brand.path} alt={brand.name} />;
+    return <img width="75%" src={brand.path} alt={brand.name} />;
 };
-
