@@ -1,14 +1,14 @@
 import React from "react";
 import { Grid, Box, Row, Typography } from "../../../styles/";
-import PromotionPicture from "./promotionSection.style";
+import { PromotionPicture } from "./PromotionPicture";
 
 const PromoSection = () => {
     return (
-        <Row>
+        <Row justify={"center"}>
             <Grid lg={6} xs={12}>
-                <Box pl={60} pt={40} pr={20}>
-                    <Typography variant="h6" color="primary">
-                        Why IT IS IMPORTANT
+                <Box pt={60} pr={20}>
+                    <Typography size="14" color="primary">
+                        WHY IT IS IMPORTANT
                     </Typography>
                     <Typography color="primary" fontStyle="bold">
                         Knowing Your Online Ads
@@ -22,7 +22,7 @@ const PromoSection = () => {
                 </Box>
             </Grid>
             <Grid lg={6} xs={12}>
-                <Box p={60} pt={40} pb={80}>
+                <Box pt={40} pb={80}>
                     <PromotionPicture>
                         <img src={"assets/imgs/promotion.png"} alt="tidal" />
                     </PromotionPicture>

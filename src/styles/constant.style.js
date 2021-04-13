@@ -54,3 +54,8 @@ export const fontStyleBold = css`
   font-weight: ${fontWeight["bold"]};
   line-height ${lineHeight["bold"]};
 `;
+
+export const fontStyleStartSection = css`
+  font-size: ${fontSize["h5"]};
+  font-weight: ${fontWeight["bold"]};
+`;

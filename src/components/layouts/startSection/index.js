@@ -1,17 +1,17 @@
 import React from "react";
 import { Grid, Box, Row, Typography } from "../../../styles/";
 import { ButtonPromotion } from "../../commons/";
-import { ContainerBtn } from "./startSections.style";
+import { ContainerBtn, Banner } from "./startSections.style";
 
 const StartSection = () => {
     return (
         <Row>
             <Grid lg={12} xs={12}>
-                <Box background="primary" p={40}>
-                    <Typography color="secundary" fontStyle="bold">
+                <Banner>
+                    <Typography color="secundary" fontStyle="startSection">
                         Find Out YOUR Online Advertising Readiness Rating!
                     </Typography>
-                </Box>
+                </Banner>
 
                 <ContainerBtn>
                     <ButtonPromotion />
