@@ -4,15 +4,16 @@ import axios from "axios";
 let lastPostId = null;
 
 export const processPost = async () => {
-    const posts = await getPost();
+    const response = await getPost();
+    const posts = adapterPost(response);
     lastPostId = posts[posts.length - 1].id_str;
     return posts;
 };
 
-const getPost = async () => {
+export const getPost = async () => {
     try {
         const response = await axios.get(`${URL}?limit=${CANT_POST_TO_DISPLAY};&start_id=${lastPostId}`);
-        return adapterPost(response.data);
+        return response.data
     } catch (error) {
         throw error;
     }

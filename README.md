@@ -2,6 +2,32 @@
 
 The social widget renders N last social posts from the api. The widget pull updates from the feed with the given interval and update the displayed list by removing old items and displaying the new ones, so the most recent N posts be displayed.
 
+# General Topics
+
+## configuration social widget
+
+You can change configuration default. for that go to constants file and replace the constant predetermines.
+
+### `DELAY_TIME_MILISECONDS`
+delay time for refresh the view with new post.
+
+### `CANT_POST_TO_DISPLAY`
+number of posts displayed
+
+### `URL`
+Route API to get the posts
+
+## Styles
+
+## add constant style
+For to add a constant style, go to styles/constant.style.js. You can add, new colors, sizes and others, so you can use several attributes in whatever part of project
+
+## new Style
+If the style can user for several components, you can add the style in styles/[name]. for specific style component, implement the style inside the folder from your component.
+
+## mobile environment
+You can change the width for render view mobile in the folder constan.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -39,28 +65,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-# General Topics
 
-## configuration social widget
-
-You can change configuration default. for that go to constants file and replace the constant predetermines.
-
-### `DELAY_TIME_MILISECONDS`
-delay time for refresh the view with new post.
-
-### `CANT_POST_TO_DISPLAY`
-number of posts displayed
-
-### `URL`
-Route API to get the posts
-
-## Styles
-
-## add constant style
-For to add a constant style, go to styles/constant.style.js. You can add, new colors, sizes and others, so you can use several attributes in whatever part of project
-
-## new Style
-If the style can user for several components, you can add the style in styles/[name]. for specific style component, implement the style inside the folder from your component.
-
-## mobile environment
-You can change the width for render view mobile in the folder constan.

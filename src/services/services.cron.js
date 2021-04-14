@@ -43,3 +43,5 @@ export const initTask = async callback => {
 
 // destroy cron
 export const endTask = () => clearTimeout(currentScheduledTask);
+
+

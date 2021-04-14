@@ -1,12 +1,22 @@
 import React from "react";
 import { Grid, Box, Row, Typography } from "../../../../styles";
-import { ButtonPromotion } from "../../../commons";
+import { ButtonPromotion, SmallButtonPromotion } from "../../../commons";
+import { ContainerBtn, ContainerShadow } from "../header.styles";
 
 const HeaderDestopk = () => {
     return (
         <Row reverse={true}>
             <Grid lg={6} xs={12}>
-                <Box backgroundImage={"assets/imgs/background_header.jpg"}></Box>
+                <Box backgroundImage={"assets/imgs/background_header.jpg"}>
+                    <ContainerBtn>
+                        <SmallButtonPromotion />
+                    </ContainerBtn>
+                    <ContainerShadow>
+                        <Typography variant="h6" color="secundary">
+                            Learning about my rating - and WHAT to do about it, has really changed the way I do online advertising. It is all about being a master at this craft, and staying there. Andrea - Barranquilla, Colombia.
+                        </Typography>
+                    </ContainerShadow>
+                </Box>
             </Grid>
             <Grid lg={6} xs={12}>
                 <Box background="primary" p={60} pt={40} pb={80}>

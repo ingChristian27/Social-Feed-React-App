@@ -11,9 +11,8 @@ const SocialWidget = () => {
 
     useEffect(() => {
         // Init first task
-        initTask(result => {
-            dispatch(setPost(result));
-        });
+        initTask(result => dispatch(setPost(result))
+        );
 
         // destroy cron
         return () => endTask();

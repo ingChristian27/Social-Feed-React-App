@@ -22,3 +22,17 @@ export const ContainerHead = styled.div`
         text-align: center;
     }
 `;
+
+export const ContainerBtn = styled.div`
+    float: right;
+    padding-right: 50px;
+    padding-top: 50px;
+`;
+
+export const ContainerShadow = styled.div`
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+`;
