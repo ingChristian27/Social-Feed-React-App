@@ -18,10 +18,9 @@ const SocialWidget = ({ cantPostDisplay = 3, updateInterval = null }) => {
         const lastIdPost = newPosts[newPosts.length - 1].id_str;
 
         dispatch(getPost(newPosts));
-        /*setTimeout(() => {
-            alert();
-            cronJob(cantPostDisplay, lastIdPost);
-        }, 5000);*/
+        setTimeout(() => {
+            //cronJob(cantPostDisplay, lastIdPost);
+        }, 5000);
     };
 
     const getPosts = async (cantPostDisplay, updateInterval) => {
@@ -46,5 +45,3 @@ const SocialWidget = ({ cantPostDisplay = 3, updateInterval = null }) => {
 export default SocialWidget;
 
 const MapPost = ({ posts }) => posts.map(post => <Post key={post.id} post={post} />);
-
-

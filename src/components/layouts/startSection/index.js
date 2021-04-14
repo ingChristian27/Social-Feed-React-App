@@ -1,24 +1,16 @@
 import React from "react";
-import { Grid, Box, Row, Typography } from "../../../styles/";
-import { ButtonPromotion } from "../../commons/";
-import { ContainerBtn, Banner } from "./startSections.style";
+import useWindowSize from "../../../utils/hook.windowsSize";
+import StartSectionDestopk from "./components/startSectionDestopk";
+import StartSectionMovil from "./components/startSectionMovil";
+import { MOVIL } from "../../../constants";
+import { matchMovil } from "../../../utils/general";
 
 const StartSection = () => {
-    return (
-        <Row>
-            <Grid lg={12} xs={12}>
-                <Banner>
-                    <Typography color="secundary" fontStyle="startSection">
-                        Find Out YOUR Online Advertising Readiness Rating!
-                    </Typography>
-                </Banner>
+    const size = useWindowSize();
+    const isMovil = matchMovil(size.width, MOVIL);
 
-                <ContainerBtn>
-                    <ButtonPromotion />
-                </ContainerBtn>
-            </Grid>
-        </Row>
-    );
+    const render = isMovil ? <StartSectionMovil /> : <StartSectionDestopk />;
+    return render;
 };
 
 export default StartSection;

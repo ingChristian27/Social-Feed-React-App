@@ -1,23 +1,16 @@
 import React from "react";
-import { Grid, Row, Typography } from "../../../styles/";
-import ContainerFooter from "./footer.style";
+import useWindowSize from "../../../utils/hook.windowsSize";
+import FooterDestopk from "./components/footerDestopk";
+import FooterMovil from "./components/footerMovil";
+import { MOVIL } from "../../../constants";
+import { matchMovil } from "../../../utils/general";
 
 const Footer = () => {
-    return (
-        <ContainerFooter>
-            <Row>
-                <Grid lg={4} xs={12}>
-                    <Typography>©2019 Tidal Traffic. All rights reserved.</Typography>
-                </Grid>
-                <Grid lg={4} xs={12}>
-                    <Typography>©2019 Tidal Traffic. All rights reserved.</Typography>
-                </Grid>
-                <Grid lg={4} xs={12}>
-                    <Typography>©2019 Tidal Traffic. All rights reserved.</Typography>
-                </Grid>
-            </Row>
-        </ContainerFooter>
-    );
+    const size = useWindowSize();
+    const isMovil = matchMovil(size.width, MOVIL);
+
+    const render = isMovil ? <FooterMovil /> : <FooterDestopk />;
+    return render;
 };
 
 export default Footer;

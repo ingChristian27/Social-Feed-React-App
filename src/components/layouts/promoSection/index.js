@@ -1,12 +1,12 @@
 import React from "react";
 import { Grid, Box, Row, Typography } from "../../../styles/";
-import { PromotionPicture } from "./PromotionPicture";
+import { PromotionPicture, ContainerPromo } from "./promoSection.style";
 
 const PromoSection = () => {
     return (
         <Row justify={"center"}>
             <Grid lg={6} xs={12}>
-                <Box pt={60} pr={20}>
+                <ContainerPromo>
                     <Typography size="14" color="primary">
                         WHY IT IS IMPORTANT
                     </Typography>
@@ -19,7 +19,7 @@ const PromoSection = () => {
                         ...will help you understand just how bullish you should be with your ad spend and where your blind spots are. When it comes to online advertising the more informed and ready you are, the more effective your advertising will be
                         (and the greater your chances of a healthy Return on your Ad Spend (ROAS)). Find Out your Online Advertising Readiness Rating so you can make more money and avoid risks with your online advertising.
                     </Typography>
-                </Box>
+                </ContainerPromo>
             </Grid>
             <Grid lg={6} xs={12}>
                 <Box pt={40} pb={80}>
