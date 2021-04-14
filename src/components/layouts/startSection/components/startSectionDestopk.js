@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, Row, Typography } from "../../../../styles/";
+import { Grid, Row, Typography } from "../../../../styles/";
 import { ButtonPromotion } from "../../../commons/";
 import { ContainerBtn, Banner } from "../startSections.style";
 
@@ -12,7 +12,6 @@ const StartSectionDestopk = () => {
                         Find Out YOUR Online Advertising Readiness Rating!
                     </Typography>
                 </Banner>
-
                 <ContainerBtn>
                     <ButtonPromotion />
                 </ContainerBtn>

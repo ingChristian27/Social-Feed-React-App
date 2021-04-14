@@ -1,8 +1,13 @@
 import React from "react";
 import { Grid, Box, Row, Typography } from "../../../styles/";
 import { PromotionPicture, ContainerPromo } from "./promoSection.style";
+import { MOVIL } from "../../../constants";
+import { matchMovil } from "../../../utils/general";
+import useWindowSize from "../../../utils/hook.windowsSize";
 
 const PromoSection = () => {
+    const size = useWindowSize();
+    const isMovil = matchMovil(size.width, MOVIL);
     return (
         <Row justify={"center"}>
             <Grid lg={6} xs={12}>
@@ -24,7 +29,7 @@ const PromoSection = () => {
             <Grid lg={6} xs={12}>
                 <Box pt={40} pb={80}>
                     <PromotionPicture>
-                        <img src={"assets/imgs/promotion.png"} alt="tidal" />
+                        <img width={isMovil ? "300px" : "auto"} src={"assets/imgs/promotion.png"} alt="tidal" />
                     </PromotionPicture>
                 </Box>
             </Grid>

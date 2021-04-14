@@ -1,10 +1,12 @@
 import { SET_POST } from "./posts.constant";
 
-export default function (state = [], action) {
+const reducer = (state = [], action) => {
     switch (action.type) {
         case SET_POST:
             return action.payload;
         default:
             return state;
     }
-}
+};
+
+export default reducer;

@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Grid, Box, Row } from "../../../styles";
 import { Post } from "../../commons/";
 import { useSelector, useDispatch } from "react-redux";
 import { setPost } from "../../../redux/posts/posts.actions";
-import { initTask } from "../../../services/services.cron";
+import { initTask, endTask } from "../../../services/services.cron";
 
 const SocialWidget = () => {
     const dispatch = useDispatch();
     const posts = useSelector(state => state.posts);
-    let cronUp = true;
 
     useEffect(() => {
         // Init first task
-        initTask(onTaskFinish);
-    }, []);
+        initTask(result => {
+            dispatch(setPost(result));
+        });
 
-    const onTaskFinish = result => {
-        dispatch(setPost(result));
-    };
+        // destroy cron
+        return () => endTask();
+    }, [dispatch]);
 
     return (
         <Row justify={"center"}>

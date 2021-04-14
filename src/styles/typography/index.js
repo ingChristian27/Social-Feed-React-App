@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { fontSize, fontColor, fontWeight, fontStyleLight, fontStyleBold, fontStyleStartSection } from "../constant.style";
+import { fontSize, fontColor, fontWeight, fontStyleLight, fontStyleBold, fontStyleStartSection, fontStyleBoldMobile, fontStyleLightMobile } from "../constant.style";
 
 const Typography = styled.p`
     color: ${props => getColor(props)};
@@ -15,6 +15,10 @@ const getFontStyle = props => {
                 return fontStyleLight;
             case "bold":
                 return fontStyleBold;
+            case "boldMobile":
+                return fontStyleBoldMobile;
+            case "lightMobile":
+                return fontStyleLightMobile;
             case "startSection":
                 return fontStyleStartSection;
             default:

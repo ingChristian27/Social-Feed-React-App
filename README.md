@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Social Feed React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The social widget renders N last social posts from the api. The widget pull updates from the feed with the given interval and update the displayed list by removing old items and displaying the new ones, so the most recent N posts be displayed.
 
 ## Available Scripts
 
@@ -39,32 +39,28 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+# General Topics
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## configuration social widget
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can change configuration default. for that go to constants file and replace the constant predetermines.
 
-### Code Splitting
+### `DELAY_TIME_MILISECONDS`
+delay time for refresh the view with new post.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `CANT_POST_TO_DISPLAY`
+number of posts displayed
 
-### Analyzing the Bundle Size
+### `URL`
+Route API to get the posts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Styles
 
-### Making a Progressive Web App
+## add constant style
+For to add a constant style, go to styles/constant.style.js. You can add, new colors, sizes and others, so you can use several attributes in whatever part of project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## new Style
+If the style can user for several components, you can add the style in styles/[name]. for specific style component, implement the style inside the folder from your component.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## mobile environment
+You can change the width for render view mobile in the folder constan.

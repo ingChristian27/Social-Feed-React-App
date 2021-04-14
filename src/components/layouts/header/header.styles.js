@@ -7,7 +7,7 @@ const query = `@media (max-width: ${MOVIL}px)`;
 export const ContainerInfo = styled.div`
     padding: 20px;
     ${query} {
-        padding: 20px;
+        padding: 15px;
         margin: 0 10%;
         background: ${backgroundColors["primary"]};
         text-align: center;

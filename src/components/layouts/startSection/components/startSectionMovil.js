@@ -1,7 +1,7 @@
 import React from "react";
-import { Grid, Box, Row, Typography } from "../../../../styles";
+import { Grid, Row, Typography } from "../../../../styles";
 import { ButtonPromotion } from "../../../commons";
-import { ContainerBtn, Banner } from "../startSections.style";
+import { Banner } from "../startSections.style";
 
 const StartSectionMovil = () => {
     return (

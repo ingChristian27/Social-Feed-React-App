@@ -29,6 +29,8 @@ export const fontWeight = {
 
 export const lineHeight = {
     light: "34px",
+    lightMobile: "25px",
+    boldMobile: "40px",
     bold: "61.75px",
 };
 
@@ -48,6 +50,11 @@ export const fontStyleLight = css`
   font-weight: ${fontWeight["light"]};
   line-height ${lineHeight["light"]};
 `;
+export const fontStyleLightMobile = css`
+  font-size: ${fontSize["h6"]};
+  font-weight: ${fontWeight["light"]};
+  line-height ${lineHeight["lightMobile"]};
+`;
 
 export const fontStyleBold = css`
   font-size: ${fontSize["h3"]};
@@ -55,7 +62,13 @@ export const fontStyleBold = css`
   line-height ${lineHeight["bold"]};
 `;
 
-export const fontStyleStartSection = css`
-  font-size: ${fontSize["h5"]};
+export const fontStyleBoldMobile = css`
+  font-size: ${fontSize["h4"]};
   font-weight: ${fontWeight["bold"]};
+  line-height ${lineHeight["boldMobile"]};
+`;
+
+export const fontStyleStartSection = css`
+    font-size: ${fontSize["h5"]};
+    font-weight: ${fontWeight["bold"]};
 `;

@@ -1,11 +1,13 @@
 import styled from "styled-components";
-const mobile = `@media (max-width: 995px)`;
+import { MOVIL } from "../../constants";
+
+const query = `@media (max-width: ${MOVIL}px)`;
 
 const Grid = styled.section`
     width: ${props => getSize(props.lg)}%;
     position: relative;
     float: left;
-    ${mobile} {
+    ${query} {
         width: ${props => getSize(props.xs)}%;
     }
 `;

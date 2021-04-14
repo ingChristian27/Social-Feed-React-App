@@ -11,13 +11,13 @@ const HeaderMovil = () => {
                 <Box backgroundImage={"assets/imgs/background_header.jpg"} pb={30}>
                     <HeadMovil className="test" />
                     <ContainerInfo>
-                        <Typography color="secundary" fontStyle="bold">
+                        <Typography color="secundary" fontStyle="boldMobile">
                             What’s Your <br />
                             Online Advertising
                             <br />
                             Readiness Rating?
                         </Typography>
-                        <Typography fontStyle="light" color="secundary">
+                        <Typography fontStyle="lightMobile" color="secundary">
                             When you take this quiz, you’ll get a free report that outlines YOUR Readiness Rating.
                         </Typography>
                         <ButtonPromotion />

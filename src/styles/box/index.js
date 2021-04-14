@@ -34,8 +34,4 @@ const getMargin = props => {
     return marginTop + "px " + marginRight + "px " + marginBottom + "px " + marginLeft + "px";
 };
 
-const getBackgroundImg = props => {
-    const test = props.backgroundImage ? `url("${props.backgroundImage}")` : "none";
-    console.log(test);
-    return test;
-};
+const getBackgroundImg = props => (props.backgroundImage ? `url("${props.backgroundImage}")` : "none");
