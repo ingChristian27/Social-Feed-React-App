@@ -1,34 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Box, Row } from "../../../styles";
 import { Post } from "../../commons/";
-import * as service from "../../../services";
 import { useSelector, useDispatch } from "react-redux";
-import { getPost } from "../../../redux/posts/posts.actions";
+import { setPost } from "../../../redux/posts/posts.actions";
+import { initTask } from "../../../services/services.cron";
 
-const SocialWidget = ({ cantPostDisplay = 3, updateInterval = null }) => {
+const SocialWidget = () => {
     const dispatch = useDispatch();
     const posts = useSelector(state => state.posts);
+    let cronUp = true;
 
     useEffect(() => {
-        cronJob(cantPostDisplay, updateInterval);
+        // Init first task
+        initTask(onTaskFinish);
     }, []);
 
-    const cronJob = async (cantPostDisplay = 3, updateInterval = null) => {
-        const newPosts = await getPosts(cantPostDisplay, updateInterval);
-        const lastIdPost = newPosts[newPosts.length - 1].id_str;
-
-        dispatch(getPost(newPosts));
-        setTimeout(() => {
-            //cronJob(cantPostDisplay, lastIdPost);
-        }, 5000);
-    };
-
-    const getPosts = async (cantPostDisplay, updateInterval) => {
-        try {
-            return await service.getPost(cantPostDisplay, updateInterval);
-        } catch (error) {
-            console.error(error);
-        }
+    const onTaskFinish = result => {
+        dispatch(setPost(result));
     };
 
     return (
